@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#090b16" />
+  <meta name="description" content="Generation X — Sayeef Adnan's personal digital universe" />
+  <title>Generation X</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Generation X home">
+        <span class="brand-mark">X</span>
+        <span class="brand-copy">
+          <strong>GENERATION X</strong>
+          <small>PERSONAL UNIVERSE</small>
+        </span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav id="navigation" aria-label="Main navigation"></nav>
+      <div class="sidebar-bottom">
+        <div class="profile-chip">
+          <div class="avatar">SA</div>
+          <div>
+            <strong id="side-name">Sayeef Adnan</strong>
+            <small>Personal space</small>
+          </div>
+          <span class="online-dot"></span>
+        </div>
+        <div class="made-by">Made by <strong>Sayeef Adnan</strong></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <button class="icon-btn menu-toggle" id="menu-toggle" aria-label="Toggle navigation">☰</button>
+        <div class="breadcrumbs"><span>Universe</span><span class="crumb-slash">/</span><strong id="current-section">Overview</strong></div>
+        <label class="global-search"><span>⌕</span><input id="search" type="search" placeholder="Search your universe..." aria-label="Search your universe" /><kbd>⌘ K</kbd></label>
+        <div class="top-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme" title="Toggle theme">◐</button>
+          <a class="icon-btn" href="/api/export" title="Download backup">⇩</a>
+          <button class="add-button" id="global-add"><span>＋</span><span class="add-label">Create new</span></button>
+        </div>
+      </header>
+      <section id="page" class="page-content" aria-live="polite"></section>
+      <footer class="site-footer">A personal digital universe <span>✦</span> Created by <strong>Sayeef Adnan</strong></footer>
+    </main>
+  </div>
+  <div class="toast-region" id="toasts" aria-live="polite"></div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <dialog id="entry-dialog" class="entry-dialog">
+    <form id="entry-form" method="dialog">
+      <div class="dialog-head">
+        <div>
+          <span class="eyebrow" id="dialog-eyebrow">NEW ENTRY</span>
+          <h2 id="dialog-title">Add to your universe</h2>
+        </div>
+        <button class="icon-btn" value="cancel" aria-label="Close dialog">×</button>
+      </div>
+      <div id="dialog-fields" class="dialog-fields"></div>
+      <div class="dialog-actions">
+        <button class="button-secondary" value="cancel">Cancel</button>
+        <button class="button-primary" id="dialog-save" value="default">Save entry <span>↗</span></button>
+      </div>
+    </form>
+  </dialog>
+  <script src="/app.js" defer></script>
+</body>
+</html>
